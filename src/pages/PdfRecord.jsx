@@ -5,7 +5,7 @@ import { BackwardOutlined } from "@ant-design/icons";
 import { useQueryRecordById } from "../core/record/query";
 
 import { useState } from "react";
-import Iframe from "react-iframe";
+
 
 export const PdfRecord = () => {
   const { id } = useParams();
@@ -61,6 +61,7 @@ export const PdfRecord = () => {
             {pdfile === "" ? (
               <p className="text-green-400 text-center">Select pdf file name to view!</p>
             ) : (
+              // eslint-disable-next-line react/jsx-no-undef
               <Iframe
                 url={`https://rms.region9.dilg.gov.ph/${pdfile}`}
                 className=" w-full h-[80vh]"

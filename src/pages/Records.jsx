@@ -16,7 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import { DeleteOutlined, SearchOutlined } from "@ant-design/icons";
 import { useDeleteRecord } from "../core/record/mutation";
 import { useQueryClient } from "@tanstack/react-query";
-import Highlighter from "react-highlight-words";
+//import Highlighter from "react-highlight-words";
 import dayjs from "dayjs";
 
 const Records = () => {
@@ -146,6 +146,7 @@ const Records = () => {
     },
     render: (text) =>
       searchedColumn === dataIndex ? (
+        // eslint-disable-next-line react/jsx-no-undef
         <Highlighter
           highlightStyle={{
             backgroundColor: "#ffc069",
